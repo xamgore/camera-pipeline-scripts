@@ -7,6 +7,7 @@ from auth import YoutubeClient
 from ordered_set import OrderedSet
 from contextlib import suppress
 from time import sleep
+from random import randint
 import json
 
 
@@ -37,7 +38,7 @@ if __name__ == '__main__':
             with suppress(TelegramError):
                 bot.sendMessage(channel, msg, disable_notification=False)
                 ready.append(msg)
-                sleep(2)
+                sleep(randint(2, 5))
 
         lost = len(queue) - len(ready)
         if lost: print(f'Can\'t send {lost} of {len(queue)} videos')
