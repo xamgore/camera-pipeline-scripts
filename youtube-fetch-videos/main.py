@@ -3,7 +3,7 @@ from os import getenv
 
 from telegram import Bot, TelegramError
 from googleapiclient.errors import HttpError
-from auth import YoutubeClient
+from youtube import YoutubeClient
 from ordered_set import OrderedSet
 from contextlib import suppress
 from time import sleep
