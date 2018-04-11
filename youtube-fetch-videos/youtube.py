@@ -22,6 +22,31 @@ class YoutubeClient(object):
         ]
 
 
+    def fetch_thumbnails_of_new_videos(self):
+        return [
+            (video, [f'i.ytimg.com/vi_webp/E4J8ZLHGt-s/maxres{i}.webp' for i in range(1, 4)])
+            for list in self.playlists()
+            for video in self.videos_in(list)
+        ]
+
+
+    def get_uploads_playlist(self):
+        """
+        :return: a list of playlists "upload" for each channel of the user
+        """
+
+        uploads = []
+        req = self.__client.channels().list(mine=True, part='contentDetails', maxResults=50,
+                                            fields='items/contentDetails/relatedPlaylists/uploads')
+
+        while req:
+            res = req.execute()
+            uploads.extend(i['contentDetails']['relatedPlaylists']['uploads'] for i in res['items'])
+            req = self.__client.playlists().list_next(req, res)
+
+        return uploads
+
+
     def playlists(self):
         """
         Fetch all playlists, which belong to the authorized user.

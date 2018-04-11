@@ -1,4 +1,6 @@
 client_secret.json
 credentials.pickle
 urls.json
+thumbnails.json
 run.sh
+thumbnails.sh
