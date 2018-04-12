@@ -30,6 +30,10 @@ class YoutubeClient(object):
         ]
 
 
+    def upload_thumbnail(self, video_id, file_path):
+        self.__client.thumbnails().set(videoId=video_id, media_body=file_path).execute()
+
+
     def get_uploads_playlist(self):
         """
         :return: a list of playlists "upload" for each channel of the user

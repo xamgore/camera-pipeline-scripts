@@ -24,7 +24,7 @@ def save_as_json_to_file(data, path):
 
 if __name__ == '__main__':
     try:
-        scope = ['https://www.googleapis.com/auth/youtube.readonly']
+        scope = ['https://www.googleapis.com/auth/youtube']
         fromInet = YoutubeClient(scope).fetch_links_to_all_videos()
         fromFile = load_data_from_file('urls.json')
 

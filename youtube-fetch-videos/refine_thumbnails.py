@@ -34,7 +34,7 @@ if __name__ == '__main__':
         bot = Bot(getenv('TM_TOKEN'))
         channel = -208794526
 
-        video_id = 'E4J8ZLHGt-s'
+        video_id = 'wffvqpzbKEI'
         markup = InlineKeyboardMarkup([[
             Btn(" 1️⃣  ", callback_data=f"{video_id}||1"),
             Btn(" 2️⃣  ", callback_data=f"{video_id}||2"),
