@@ -14,9 +14,6 @@ from random import randint
 import requests
 import json
 
-num = 1
-video_id = 'wffvqpzbKEI'
-
 
 def upload(video_id, num):
     file_path = f'{video_id}_maxres{num}.jpg'

@@ -12,9 +12,9 @@ import json
 
 
 def load_data_from_file(path):
-    with open(path) as file:
-        data = json.load(file)
-    return data or []
+    with suppress(FileNotFoundError), open(path) as file:
+        return json.load(file) or []
+    return []
 
 
 def save_as_json_to_file(data, path):
@@ -24,38 +24,39 @@ def save_as_json_to_file(data, path):
 
 if __name__ == '__main__':
     try:
-        # scope = ['https://www.googleapis.com/auth/youtube.readonly']
-        # fromInet = YoutubeClient(scope).fetch_thumbnails_of_new_videos
-        # fromFile = load_data_from_file('thumbnails.json')
-        #
-        # queue = OrderedSet(fromInet) - OrderedSet(fromFile)
-        # ready = OrderedSet()
+        scope = ['https://www.googleapis.com/auth/youtube']
+        fromInet = YoutubeClient(scope).fetch_thumbnails_of_new_videos()
+        fromFile = load_data_from_file('thumbnails.json')
+
+        queue = OrderedSet(fromInet) - OrderedSet(fromFile)
+        ready = OrderedSet()
 
         bot = Bot(getenv('TM_TOKEN'))
-        channel = -208794526
+        channel = getenv('CHAT')
 
-        video_id = 'wffvqpzbKEI'
-        markup = InlineKeyboardMarkup([[
-            Btn(" 1️⃣  ", callback_data=f"{video_id}||1"),
-            Btn(" 2️⃣  ", callback_data=f"{video_id}||2"),
-            Btn(" 3️⃣  ", callback_data=f"{video_id}||3"),
-        ]])
+        for video_id in queue:
+            with suppress(TelegramError):
+                markup = InlineKeyboardMarkup([[
+                    Btn(" 1️⃣  ", callback_data=f"{video_id}||1"),
+                    Btn(" 2️⃣  ", callback_data=f"{video_id}||2"),
+                    Btn(" 3️⃣  ", callback_data=f"{video_id}||3"),
+                ]])
 
-        for i in range(1, 4):
-            photo_url = f'https://i.ytimg.com/vi_webp/{video_id}/maxres{i}.webp'
-            bot.sendSticker(channel, photo_url, disable_notification=True,
-                            reply_markup=markup if i == 3 else None)
+                success = True
+                for i in range(1, 4):
+                    photo_url = f'https://i.ytimg.com/vi_webp/{video_id}/maxres{i}.webp'
+                    success &= not bot.sendSticker(channel, photo_url, disable_notification=True,
+                                    reply_markup=markup if i == 3 else None)
+                    sleep(2)
 
-        # for msg in queue:
-        #     with suppress(TelegramError):
-        #         bot.sendMessage(channel, msg, disable_notification=False)
-        #         ready.append(msg)
-        #         sleep(randint(2, 5))
-        #
-        # lost = len(queue) - len(ready)
-        # if lost: print(f'Can\'t send {lost} of {len(queue)} videos')
-        #
-        # save_as_json_to_file(fromFile + list(ready), 'urls.json')
+                if success:
+                    ready.append(video_id)
+                sleep(randint(2, 5))
+
+        lost = len(queue) - len(ready)
+        if lost: print(f'Can\'t send {lost} of {len(queue)} videos')
+
+        save_as_json_to_file(fromFile + list(ready), 'thumbnails.json')
 
     except HttpError as e:
         print('An HTTP error %d occurred:\n%s' % (e.resp.status, e.content))

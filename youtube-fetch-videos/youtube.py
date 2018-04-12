@@ -23,11 +23,7 @@ class YoutubeClient(object):
 
 
     def fetch_thumbnails_of_new_videos(self):
-        return [
-            (video, [f'i.ytimg.com/vi_webp/E4J8ZLHGt-s/maxres{i}.webp' for i in range(1, 4)])
-            for list in self.playlists()
-            for video in self.videos_in(list)
-        ]
+        return [video for list in self.playlists() for video in self.videos_in(list)]
 
 
     def upload_thumbnail(self, video_id, file_path):
