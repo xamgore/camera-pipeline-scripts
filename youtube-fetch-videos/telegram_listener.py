@@ -16,13 +16,16 @@ import json
 
 
 def upload(video_id, num):
+    print('download preview...', end='')
     file_path = f'{video_id}_maxres{num}.jpg'
     with open(file_path, 'wb') as f:
         f.write(requests.get(f'https://i.ytimg.com/vi/{video_id}/maxres{num}.jpg').content)
-    print('saved')
+        print('ok')
+
+    print('upload to youtube...', end='')
     youtube.upload_thumbnail(video_id, file_path)
-    print('uploaded')
     os.remove(file_path)
+    print('ok')
 
 
 def thumbnail_button(bot, cfg):
@@ -33,7 +36,6 @@ def thumbnail_button(bot, cfg):
         return
 
     upload(video_id, num)
-    print('uploaded')
 
     f = lambda s, i: " 🆗 " if str(i) == num else s
 
