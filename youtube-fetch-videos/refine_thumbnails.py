@@ -45,16 +45,19 @@ if __name__ == '__main__':
                 success = True
                 for i in range(1, 4):
                     photo_url = f'https://i.ytimg.com/vi_webp/{video_id}/maxres{i}.webp'
-                    success &= not bot.sendSticker(channel, photo_url, disable_notification=True,
-                                    reply_markup=markup if i == 3 else None)
+                    err = not bot.sendSticker(channel, photo_url, disable_notification=True,
+                                             reply_markup=markup if i == 3 else None)
+                    print(f'image {i}: ' + ('err' if err else 'ok'))
+                    success &= not err
                     sleep(2)
 
-                if success:
-                    ready.append(video_id)
+                if success: ready.append(video_id)
+                print(f'{video_id}: {"ok" if success else "err"}')
                 sleep(randint(2, 5))
 
         lost = len(queue) - len(ready)
         if lost: print(f'Can\'t send {lost} of {len(queue)} videos')
+        if not queue: print('No new videos')
 
         save_as_json_to_file(fromFile + list(ready), 'thumbnails.json')
 
