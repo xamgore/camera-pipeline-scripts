@@ -36,7 +36,7 @@ if __name__ == '__main__':
 
         for msg in queue:
             with suppress(TelegramError):
-                bot.sendMessage(channel, msg, disable_notification=False)
+                bot.sendMessage(channel, msg, disable_notification=True)
                 ready.append(msg)
                 sleep(randint(2, 5))
 
