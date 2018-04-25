@@ -1,4 +1,29 @@
-config.prod.yml
+*.prod.yml
+client_secret.json
+credentials.pickle
+thumbnails.json
+urls.json
+run.sh
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # Created by .ignore support plugin (hsz.mobi)

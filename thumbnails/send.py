@@ -1,16 +1,14 @@
-#!/usr/bin/python
-from os import getenv
+#!/usr/bin/env python3
 
+from __init__ import *
 from telegram import Bot, TelegramError, InlineKeyboardMarkup, InlineKeyboardButton as Btn
 from googleapiclient.errors import HttpError
-from init import load_config
-from os.path import join, dirname
 from youtube import YoutubeClient
 from ordered_set import OrderedSet
 from contextlib import suppress
 from time import sleep
 from random import randint
-import json
+import config
 
 
 def load_data_from_file(path):
@@ -26,7 +24,7 @@ def save_as_json_to_file(data, path):
         json.dump(data, file, indent=2)
 
 
-if __name__ == '__main__':
+def send():
     try:
         scope = ['https://www.googleapis.com/auth/youtube']
         fromInet = YoutubeClient(scope).fetch_thumbnails_of_new_videos()
@@ -35,9 +33,9 @@ if __name__ == '__main__':
         queue = OrderedSet(fromInet) - OrderedSet(fromFile)
         ready = OrderedSet()
 
-        config = load_config('../config.prod.yml')
-        bot = Bot(config['TM_TOKEN'])
-        channel = config['DEV_CHAT']
+        env = config.load('config.prod.yml')
+        bot = Bot(env['TM_TOKEN'])
+        channel = env['DEV_CHAT']
 
         for video_id in queue:
             with suppress(TelegramError):
@@ -50,7 +48,8 @@ if __name__ == '__main__':
                 success = True
                 for i in range(1, 4):
                     photo_url = f'https://i.ytimg.com/vi_webp/{video_id}/maxres{i}.webp'
-                    err = not bot.sendSticker(channel, photo_url, disable_notification=True,
+                    err = not bot.sendSticker(channel, photo_url, timeout=20,
+                                              disable_notification=True,
                                               reply_markup=markup if i == 3 else None)
                     print(f'image {i}: ' + ('err' if err else 'ok'))
                     success &= not err
@@ -61,10 +60,14 @@ if __name__ == '__main__':
                 sleep(randint(2, 5))
 
         lost = len(queue) - len(ready)
-        if lost: print(f'Can\'t send {lost} of {len(queue)} videos')
-        if not queue: print('No new videos')
-
         save_as_json_to_file(fromFile + list(ready), 'thumbnails.json')
+        if lost: return f'Can\'t send {lost} of {len(queue)} videos'
+        if not queue: return 'No new videos'
+        return 'ok'
 
     except HttpError as e:
         print('An HTTP error %d occurred:\n%s' % (e.resp.status, e.content))
+
+
+if __name__ == '__main__':
+    print(send())

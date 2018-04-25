@@ -1,11 +1,11 @@
-#!/bin/python
+#!/usr/bin/env python3
 
+from __init__ import *
 from telegram import Bot
 from emoji import emojize
-from init import load_config
-import sys
+import config
 
-config = load_config('../config.prod.yml')
-chat = config['DEV_CHAT']
+env = config.load('config.prod.yml')
+chat = env['DEV_CHAT']
 msg = emojize(sys.argv[-1], use_aliases=True)
-Bot(config['TM_TOKEN']).sendMessage(chat, msg)
+Bot(env['TM_TOKEN']).sendMessage(chat, msg)
