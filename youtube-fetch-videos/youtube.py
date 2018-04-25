@@ -3,11 +3,12 @@ import pickle
 from os import path
 from google_auth_oauthlib.flow import InstalledAppFlow as get_auth_token
 from googleapiclient.discovery import build as get_client
+from os.path import join, dirname
 
 
 class YoutubeClient(object):
-    CREDENTIALS_FILE = 'credentials.pickle'
-    CLIENT_SECRET = 'client_secret.json'
+    CREDENTIALS_FILE = join(dirname(__file__), 'credentials.pickle')
+    CLIENT_SECRET = join(dirname(__file__), 'client_secret.json')
 
 
     def __init__(self, scopes):

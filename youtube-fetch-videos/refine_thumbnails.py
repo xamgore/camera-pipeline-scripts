@@ -3,6 +3,8 @@ from os import getenv
 
 from telegram import Bot, TelegramError, InlineKeyboardMarkup, InlineKeyboardButton as Btn
 from googleapiclient.errors import HttpError
+from init import load_config
+from os.path import join, dirname
 from youtube import YoutubeClient
 from ordered_set import OrderedSet
 from contextlib import suppress
@@ -12,12 +14,14 @@ import json
 
 
 def load_data_from_file(path):
+    path = join(dirname(__file__), path)
     with suppress(FileNotFoundError), open(path) as file:
         return json.load(file) or []
     return []
 
 
 def save_as_json_to_file(data, path):
+    path = join(dirname(__file__), path)
     with open(path, 'w') as file:
         json.dump(data, file, indent=2)
 
@@ -31,8 +35,9 @@ if __name__ == '__main__':
         queue = OrderedSet(fromInet) - OrderedSet(fromFile)
         ready = OrderedSet()
 
-        bot = Bot(getenv('TM_TOKEN'))
-        channel = getenv('CHAT')
+        config = load_config('../config.prod.yml')
+        bot = Bot(config['TM_TOKEN'])
+        channel = config['DEV_CHAT']
 
         for video_id in queue:
             with suppress(TelegramError):
@@ -46,7 +51,7 @@ if __name__ == '__main__':
                 for i in range(1, 4):
                     photo_url = f'https://i.ytimg.com/vi_webp/{video_id}/maxres{i}.webp'
                     err = not bot.sendSticker(channel, photo_url, disable_notification=True,
-                                             reply_markup=markup if i == 3 else None)
+                                              reply_markup=markup if i == 3 else None)
                     print(f'image {i}: ' + ('err' if err else 'ok'))
                     success &= not err
                     sleep(2)
