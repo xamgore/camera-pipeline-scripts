@@ -1,0 +1,448 @@
+{
+  "tracks": [
+    {
+      "track_type": "General",
+      "count": "332",
+      "count_of_stream_of_this_kind": "1",
+      "kind_of_stream": "General",
+      "other_kind_of_stream": [
+        "General"
+      ],
+      "stream_identifier": "0",
+      "track_id": 0,
+      "other_track_id": [
+        "0 (0x0)"
+      ],
+      "count_of_video_streams": "1",
+      "count_of_audio_streams": "1",
+      "count_of_text_streams": "1",
+      "video_format_list": "AVC",
+      "video_format_withhint_list": "AVC",
+      "codecs_video": "AVC",
+      "audio_format_list": "AC-3",
+      "audio_format_withhint_list": "AC-3",
+      "audio_codecs": "AC3",
+      "text_format_list": "PGS",
+      "text_format_withhint_list": "PGS",
+      "text_codecs": "PGS",
+      "complete_name": "00000.MTS",
+      "file_name": 0,
+      "other_file_name": [
+        "00000",
+        "00000.MTS"
+      ],
+      "file_extension": "MTS",
+      "format": "BDAV",
+      "other_format": [
+        "BDAV"
+      ],
+      "format_info": "Blu-ray Video",
+      "format_extensions_usually_used": "m2ts mts ssif",
+      "commercial_name": "BDAV",
+      "codec": "BDAV",
+      "other_codec": [
+        "BDAV"
+      ],
+      "codec_info": "Blu-ray Video",
+      "codec_extensions_usually_used": "m2ts mts ssif",
+      "file_size": 4286208000,
+      "other_file_size": [
+        "3.99 GiB",
+        "4 GiB",
+        "4.0 GiB",
+        "3.99 GiB",
+        "3.992 GiB"
+      ],
+      "duration": "1589754.125000",
+      "other_duration": [
+        "26 min 29 s",
+        "26 min 29 s 754 ms",
+        "26 min 29 s",
+        "00:26:29.754",
+        "00:26:29:20",
+        "00:26:29.754 (00:26:29:20)"
+      ],
+      "overall_bit_rate_mode": "VBR",
+      "other_overall_bit_rate_mode": [
+        "Variable"
+      ],
+      "overall_bit_rate": 21568990,
+      "other_overall_bit_rate": [
+        "21.6 Mb/s"
+      ],
+      "maximum_overall_bit_rate": 24000000,
+      "other_maximum_overall_bit_rate": [
+        "24.0 Mb/s"
+      ],
+      "frame_rate": "25.000",
+      "other_frame_rate": [
+        "25.000 FPS"
+      ],
+      "frame_count": "39745",
+      "stream_size": 171824545,
+      "other_stream_size": [
+        "164 MiB (4%)",
+        "164 MiB",
+        "164 MiB",
+        "164 MiB",
+        "163.9 MiB",
+        "164 MiB (4%)"
+      ],
+      "proportion_of_this_stream": "0.04009",
+      "recorded_date": "2018-04-27 10:16:11+03:00",
+      "file_last_modification_date": "UTC 2018-04-27 07:42:42",
+      "file_last_modification_date__local": "2018-04-27 10:42:42",
+      "writing_application": "Panasonic",
+      "other_writing_application": [
+        "Panasonic"
+      ],
+      "encoded_application_companyname": "Panasonic",
+      "overallbitrate_precision_min": "21568983",
+      "overallbitrate_precision_max": "21568996"
+    },
+    {
+      "track_type": "Video",
+      "count": "345",
+      "count_of_stream_of_this_kind": "1",
+      "kind_of_stream": "Video",
+      "other_kind_of_stream": [
+        "Video"
+      ],
+      "stream_identifier": "0",
+      "streamorder": "0-0",
+      "track_id": 4113,
+      "other_track_id": [
+        "4113 (0x1011)"
+      ],
+      "menu_id": 1,
+      "other_menu_id": [
+        "1 (0x1)"
+      ],
+      "format": "AVC",
+      "format_info": "Advanced Video Codec",
+      "format_url": "http://developers.videolan.org/x264.html",
+      "commercial_name": "AVC",
+      "format_profile": "High@L4",
+      "format_settings": "CABAC / 2 Ref Frames",
+      "format_settings__cabac": "Yes",
+      "other_format_settings__cabac": [
+        "Yes"
+      ],
+      "format_settings__reframes": 2,
+      "other_format_settings__reframes": [
+        "2 frames"
+      ],
+      "format_settings__gop": "M=3, N=12",
+      "internet_media_type": "video/H264",
+      "codec_id": "27",
+      "codec": "AVC",
+      "other_codec": [
+        "AVC"
+      ],
+      "codec_family": "AVC",
+      "codec_info": "Advanced Video Codec",
+      "codec_url": "http://developers.videolan.org/x264.html",
+      "codec_profile": "High@L4",
+      "codec_settings": "CABAC / 2 Ref Frames",
+      "codec_settings__cabac": "Yes",
+      "codec_settings_refframes": "2",
+      "duration": 1589800,
+      "other_duration": [
+        "26 min 29 s",
+        "26 min 29 s 800 ms",
+        "26 min 29 s",
+        "00:26:29.800",
+        "00:26:29:20",
+        "00:26:29.800 (00:26:29:20)"
+      ],
+      "bit_rate_mode": "VBR",
+      "other_bit_rate_mode": [
+        "Variable"
+      ],
+      "bit_rate": 20320038,
+      "other_bit_rate": [
+        "20.3 Mb/s"
+      ],
+      "maximum_bit_rate": 21600256,
+      "other_maximum_bit_rate": [
+        "21.6 Mb/s"
+      ],
+      "width": 1920,
+      "other_width": [
+        "1 920 pixels"
+      ],
+      "height": 1080,
+      "other_height": [
+        "1 080 pixels"
+      ],
+      "stored_height": "1088",
+      "sampled_width": "1920",
+      "sampled_height": "1080",
+      "pixel_aspect_ratio": "1.000",
+      "display_aspect_ratio": "1.778",
+      "other_display_aspect_ratio": [
+        "16:9"
+      ],
+      "frame_rate": "25.000",
+      "other_frame_rate": [
+        "25.000 FPS"
+      ],
+      "frame_count": "39745",
+      "resolution": 8,
+      "other_resolution": [
+        "8 bits"
+      ],
+      "colorimetry": "4:2:0",
+      "color_space": "YUV",
+      "chroma_subsampling": "4:2:0",
+      "other_chroma_subsampling": [
+        "4:2:0"
+      ],
+      "bit_depth": 8,
+      "other_bit_depth": [
+        "8 bits"
+      ],
+      "scan_type": "Interlaced",
+      "other_scan_type": [
+        "Interlaced"
+      ],
+      "scan_type__store_method": "SeparatedFields",
+      "other_scan_type__store_method": [
+        "Separated fields"
+      ],
+      "scan_order": "TFF",
+      "other_scan_order": [
+        "Top Field First"
+      ],
+      "interlacement": "TFF",
+      "other_interlacement": [
+        "Top Field First"
+      ],
+      "bits__pixel_frame": "0.392",
+      "delay": "888.889",
+      "other_delay": [
+        "889 ms",
+        "889 ms",
+        "889 ms",
+        "00:00:00.889"
+      ],
+      "delay__origin": "Container",
+      "other_delay__origin": [
+        "Container"
+      ],
+      "stream_size": 4038099551,
+      "other_stream_size": [
+        "3.76 GiB (94%)",
+        "4 GiB",
+        "3.8 GiB",
+        "3.76 GiB",
+        "3.761 GiB",
+        "3.76 GiB (94%)"
+      ],
+      "proportion_of_this_stream": "0.94211",
+      "buffer_size": "17280000 / 17280000",
+      "format_identifier": "HDMV"
+    },
+    {
+      "track_type": "Audio",
+      "count": "297",
+      "count_of_stream_of_this_kind": "1",
+      "kind_of_stream": "Audio",
+      "other_kind_of_stream": [
+        "Audio"
+      ],
+      "stream_identifier": "0",
+      "streamorder": "0-1",
+      "track_id": 4352,
+      "other_track_id": [
+        "4352 (0x1100)"
+      ],
+      "menu_id": 1,
+      "other_menu_id": [
+        "1 (0x1)"
+      ],
+      "format": "AC-3",
+      "format_info": "Audio Coding 3",
+      "commercial_name": "AC-3",
+      "format_settings__endianness": "Big",
+      "codec_id": "129",
+      "codec": "AC3",
+      "other_codec": [
+        "AC3"
+      ],
+      "duration": 1589248,
+      "other_duration": [
+        "26 min 29 s",
+        "26 min 29 s 248 ms",
+        "26 min 29 s",
+        "00:26:29.248",
+        "00:26:42:02",
+        "00:26:29.248 (00:26:42:02)"
+      ],
+      "bit_rate_mode": "CBR",
+      "other_bit_rate_mode": [
+        "Constant"
+      ],
+      "bit_rate": 384000,
+      "other_bit_rate": [
+        "384 kb/s"
+      ],
+      "channel_s": 6,
+      "other_channel_s": [
+        "6 channels"
+      ],
+      "channel_positions": "Front: L C R, Side: L R, LFE",
+      "other_channel_positions": [
+        "3/2/0.1"
+      ],
+      "channellayout": "L C R LFE Ls Rs",
+      "samples_per_frame": "1536",
+      "sampling_rate": 48000,
+      "other_sampling_rate": [
+        "48.0 kHz"
+      ],
+      "samples_count": "76283904",
+      "frame_rate": "31.250",
+      "other_frame_rate": [
+        "31.250 FPS (1536 SPF)"
+      ],
+      "frame_count": "49664",
+      "resolution": 16,
+      "other_resolution": [
+        "16 bits"
+      ],
+      "bit_depth": 16,
+      "other_bit_depth": [
+        "16 bits"
+      ],
+      "compression_mode": "Lossy",
+      "other_compression_mode": [
+        "Lossy"
+      ],
+      "delay": "888.889",
+      "other_delay": [
+        "889 ms",
+        "889 ms",
+        "889 ms",
+        "00:00:00.889"
+      ],
+      "delay__origin": "Container",
+      "other_delay__origin": [
+        "Container"
+      ],
+      "delay_relative_to_video": 0,
+      "other_delay_relative_to_video": [
+        "00:00:00.000"
+      ],
+      "video0_delay": 0,
+      "other_video0_delay": [
+        "00:00:00.000"
+      ],
+      "stream_size": 76283904,
+      "other_stream_size": [
+        "72.8 MiB (2%)",
+        "73 MiB",
+        "73 MiB",
+        "72.8 MiB",
+        "72.75 MiB",
+        "72.8 MiB (2%)"
+      ],
+      "proportion_of_this_stream": "0.01780",
+      "service_kind": "CM",
+      "other_service_kind": [
+        "Complete Main"
+      ],
+      "bsid": "4",
+      "dialnorm": -31,
+      "other_dialnorm": [
+        "-31 dB"
+      ],
+      "compr": "-0.28",
+      "other_compr": [
+        "-0.28 dB"
+      ],
+      "acmod": "7",
+      "lfeon": "1",
+      "dialnorm_average": -31,
+      "other_dialnorm_average": [
+        "-31 dB"
+      ],
+      "dialnorm_minimum": -31,
+      "other_dialnorm_minimum": [
+        "-31 dB"
+      ],
+      "dialnorm_maximum": -31,
+      "other_dialnorm_maximum": [
+        "-31 dB"
+      ],
+      "dialnorm_count": "944",
+      "compr_average": "-1.78",
+      "other_compr_average": [
+        "-1.78 dB"
+      ],
+      "compr_minimum": "-6.02",
+      "other_compr_minimum": [
+        "-6.02 dB"
+      ],
+      "compr_maximum": "-0.56",
+      "other_compr_maximum": [
+        "-0.56 dB"
+      ],
+      "compr_count": "90",
+      "format_identifier": "AC-3"
+    },
+    {
+      "track_type": "Text",
+      "count": "236",
+      "count_of_stream_of_this_kind": "1",
+      "kind_of_stream": "Text",
+      "other_kind_of_stream": [
+        "Text"
+      ],
+      "stream_identifier": "0",
+      "streamorder": "0-2",
+      "track_id": 4608,
+      "other_track_id": [
+        "4608 (0x1200)"
+      ],
+      "menu_id": 1,
+      "other_menu_id": [
+        "1 (0x1)"
+      ],
+      "format": "PGS",
+      "commercial_name": "PGS",
+      "codec_id": "144",
+      "codec": "PGS",
+      "other_codec": [
+        "PGS"
+      ],
+      "duration": 1589336,
+      "other_duration": [
+        "26 min 29 s",
+        "26 min 29 s 336 ms",
+        "26 min 29 s",
+        "00:26:29.336",
+        "00:26:29.336"
+      ],
+      "delay": "888.889",
+      "other_delay": [
+        "889 ms",
+        "889 ms",
+        "889 ms",
+        "00:00:00.889"
+      ],
+      "delay__origin": "Container",
+      "other_delay__origin": [
+        "Container"
+      ],
+      "delay_relative_to_video": 0,
+      "other_delay_relative_to_video": [
+        "00:00:00.000"
+      ],
+      "video0_delay": 0,
+      "other_video0_delay": [
+        "00:00:00.000"
+      ]
+    }
+  ]
+}

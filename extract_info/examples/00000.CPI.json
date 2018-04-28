@@ -1,0 +1,270 @@
+{
+  "tracks": [
+    {
+      "track_type": "General",
+      "count": "330",
+      "count_of_stream_of_this_kind": "1",
+      "kind_of_stream": "General",
+      "other_kind_of_stream": [
+        "General"
+      ],
+      "stream_identifier": "0",
+      "count_of_video_streams": "2",
+      "count_of_audio_streams": "2",
+      "count_of_text_streams": "2",
+      "video_format_list": "AVC / AVC",
+      "video_format_withhint_list": "AVC / AVC",
+      "audio_format_list": "AC-3 / AC-3",
+      "audio_format_withhint_list": "AC-3 / AC-3",
+      "audio_language_list": "English / English",
+      "text_format_list": "PGS / PGS",
+      "text_format_withhint_list": "PGS / PGS",
+      "text_language_list": "English / English",
+      "complete_name": "CLIPINF/00000.CPI",
+      "folder_name": "CLIPINF",
+      "file_name": 0,
+      "other_file_name": [
+        "00000",
+        "00000.CPI"
+      ],
+      "file_extension": "CPI",
+      "format": "Blu-ray Clip info / Blu-ray Clip info",
+      "other_format": [
+        "Blu-ray Clip info"
+      ],
+      "format_extensions_usually_used": "clpi",
+      "commercial_name": "Blu-ray Clip info",
+      "codec": "Blu-ray Clip info",
+      "other_codec": [
+        "Blu-ray Clip info"
+      ],
+      "codec_extensions_usually_used": "clpi",
+      "file_size": 16118,
+      "other_file_size": [
+        "15.7 KiB",
+        "16 KiB",
+        "16 KiB",
+        "15.7 KiB",
+        "15.74 KiB"
+      ],
+      "frame_rate": "25.000",
+      "other_frame_rate": [
+        "25.000 FPS"
+      ],
+      "file_last_modification_date": "UTC 2018-04-27 07:42:43",
+      "file_last_modification_date__local": "2018-04-27 10:42:43"
+    },
+    {
+      "track_type": "Video",
+      "count": "344",
+      "count_of_stream_of_this_kind": "2",
+      "kind_of_stream": "Video",
+      "other_kind_of_stream": [
+        "Video"
+      ],
+      "stream_identifier": 0,
+      "other_stream_identifier": [
+        "1"
+      ],
+      "track_id": 4113,
+      "other_track_id": [
+        "4113 (0x1011)"
+      ],
+      "format": "AVC",
+      "format_info": "Advanced Video Codec",
+      "format_url": "http://developers.videolan.org/x264.html",
+      "commercial_name": "AVC",
+      "internet_media_type": "video/H264",
+      "width": 1920,
+      "other_width": [
+        "1 920 pixels"
+      ],
+      "height": 1080,
+      "other_height": [
+        "1 080 pixels"
+      ],
+      "pixel_aspect_ratio": "1.000",
+      "display_aspect_ratio": "1.778",
+      "other_display_aspect_ratio": [
+        "16:9"
+      ],
+      "frame_rate": "25.000",
+      "other_frame_rate": [
+        "25.000 FPS"
+      ],
+      "interlacement": "Interlaced",
+      "other_interlacement": [
+        "Interlaced"
+      ]
+    },
+    {
+      "track_type": "Video",
+      "count": "344",
+      "count_of_stream_of_this_kind": "2",
+      "kind_of_stream": "Video",
+      "other_kind_of_stream": [
+        "Video"
+      ],
+      "stream_identifier": 1,
+      "other_stream_identifier": [
+        "2"
+      ],
+      "track_id": 4113,
+      "other_track_id": [
+        "4113 (0x1011)"
+      ],
+      "format": "AVC",
+      "format_info": "Advanced Video Codec",
+      "format_url": "http://developers.videolan.org/x264.html",
+      "commercial_name": "AVC",
+      "internet_media_type": "video/H264",
+      "width": 1920,
+      "other_width": [
+        "1 920 pixels"
+      ],
+      "height": 1080,
+      "other_height": [
+        "1 080 pixels"
+      ],
+      "pixel_aspect_ratio": "1.000",
+      "display_aspect_ratio": "1.778",
+      "other_display_aspect_ratio": [
+        "16:9"
+      ],
+      "frame_rate": "25.000",
+      "other_frame_rate": [
+        "25.000 FPS"
+      ],
+      "interlacement": "Interlaced",
+      "other_interlacement": [
+        "Interlaced"
+      ]
+    },
+    {
+      "track_type": "Audio",
+      "count": "275",
+      "count_of_stream_of_this_kind": "2",
+      "kind_of_stream": "Audio",
+      "other_kind_of_stream": [
+        "Audio"
+      ],
+      "stream_identifier": 0,
+      "other_stream_identifier": [
+        "1"
+      ],
+      "track_id": 4352,
+      "other_track_id": [
+        "4352 (0x1100)"
+      ],
+      "format": "AC-3",
+      "format_info": "Audio Coding 3",
+      "commercial_name": "AC-3",
+      "sampling_rate": 48000,
+      "other_sampling_rate": [
+        "48.0 kHz"
+      ],
+      "compression_mode": "Lossy",
+      "other_compression_mode": [
+        "Lossy"
+      ],
+      "language": "en",
+      "other_language": [
+        "English",
+        "English",
+        "en",
+        "eng",
+        "en"
+      ]
+    },
+    {
+      "track_type": "Audio",
+      "count": "275",
+      "count_of_stream_of_this_kind": "2",
+      "kind_of_stream": "Audio",
+      "other_kind_of_stream": [
+        "Audio"
+      ],
+      "stream_identifier": 1,
+      "other_stream_identifier": [
+        "2"
+      ],
+      "track_id": 4352,
+      "other_track_id": [
+        "4352 (0x1100)"
+      ],
+      "format": "AC-3",
+      "format_info": "Audio Coding 3",
+      "commercial_name": "AC-3",
+      "sampling_rate": 48000,
+      "other_sampling_rate": [
+        "48.0 kHz"
+      ],
+      "compression_mode": "Lossy",
+      "other_compression_mode": [
+        "Lossy"
+      ],
+      "language": "en",
+      "other_language": [
+        "English",
+        "English",
+        "en",
+        "eng",
+        "en"
+      ]
+    },
+    {
+      "track_type": "Text",
+      "count": "236",
+      "count_of_stream_of_this_kind": "2",
+      "kind_of_stream": "Text",
+      "other_kind_of_stream": [
+        "Text"
+      ],
+      "stream_identifier": 0,
+      "other_stream_identifier": [
+        "1"
+      ],
+      "track_id": 4608,
+      "other_track_id": [
+        "4608 (0x1200)"
+      ],
+      "format": "PGS",
+      "commercial_name": "PGS",
+      "language": "en",
+      "other_language": [
+        "English",
+        "English",
+        "en",
+        "eng",
+        "en"
+      ]
+    },
+    {
+      "track_type": "Text",
+      "count": "236",
+      "count_of_stream_of_this_kind": "2",
+      "kind_of_stream": "Text",
+      "other_kind_of_stream": [
+        "Text"
+      ],
+      "stream_identifier": 1,
+      "other_stream_identifier": [
+        "2"
+      ],
+      "track_id": 4608,
+      "other_track_id": [
+        "4608 (0x1200)"
+      ],
+      "format": "PGS",
+      "commercial_name": "PGS",
+      "language": "en",
+      "other_language": [
+        "English",
+        "English",
+        "en",
+        "eng",
+        "en"
+      ]
+    }
+  ]
+}
