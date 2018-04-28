@@ -26,7 +26,7 @@ def thumbnail_button(bot, cfg):
     req = cfg.callback_query
     video_id, num = req.data.split('||')
 
-    if str(req.message.chat.id) != env['DEV_CHAT']:
+    if req.message.chat.id != env['DEV_CHAT']:
         return
 
     upload(video_id, num)
