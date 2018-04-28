@@ -1,0 +1,88 @@
+{
+  "Monday":   [
+    {
+      "time":  "10:00",
+      "week":  "even",
+      "type":  "practice",
+      "title": "Формальные языки",
+      "who":   "Вербицкая Е."
+    }, {
+      "time":  "12:00",
+      "type":  "practice",
+      "title": "Алгоритмы и структуры данных",
+      "who":   "Слабодкин М.А."
+    }, {
+      "time":  "16:30",
+      "week":  "odd",
+      "type":  "lecture",
+      "title": "Формальные языки",
+      "who":   "Дворкин М.Э."
+    }
+  ],
+  "Tuesday":  [
+    {
+      "time":  "10:00",
+      "type":  "lecture",
+      "title": "C++",
+      "who":   "Лесин В.М."
+    }, {
+      "time":  "14:30",
+      "type":  "lecture",
+      "title": "Java",
+      "who":   "Кузнецов А.м."
+    }, {
+      "time":  "16:30",
+      "type":  "lecture",
+      "title": "Машинное обучение",
+      "who":   "Шпильман А."
+    }
+  ],
+  "Thursday": [
+    {
+      "time":  "10:00",
+      "type":  "lecture",
+      "title": "Алгоритмы и структуры данных",
+      "who":   "Смаль А.В."
+    }, {
+      "time":  "14:30",
+      "type":  "lecture",
+      "title": "Матлогика",
+      "who":   "Москвин Д.Н."
+    }, {
+      "time":  "16:30",
+      "week":  "even",
+      "type":  "practice",
+      "title": "Матлогика",
+      "who":   "Москвин Д.Н"
+    }, {
+      "time":  "16:30",
+      "week":  "odd",
+      "type":  "lecture",
+      "title": "Типы в языках программирования",
+      "who":   "Москвин Д.Н"
+    }, {
+      "time":  "18:30",
+      "type":  "practice",
+      "title": "Типы в языках программирования",
+      "who":   "Москвин Д.Н."
+    }
+  ],
+  "Friday":   [
+    {
+      "time":  "10:00",
+      "type":  "practice",
+      "title": "Java",
+      "who":   "Саввинов Д."
+    }, {
+      "time":  "12:00",
+      "type":  "lecture",
+      "title": "Software Design",
+      "who":   "Брыксин Т."
+    }, {
+      "time":  "14:30",
+      "type":  "practice",
+      "title": "Software Design",
+      "who":   "Литвинов Ю."
+    }
+  ]
+}
