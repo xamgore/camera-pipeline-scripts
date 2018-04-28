@@ -1,4 +1,5 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
+
 from __init__ import *
 from telegram import Bot, TelegramError
 from googleapiclient.errors import HttpError

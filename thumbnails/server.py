@@ -1,4 +1,5 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
+
 from __init__ import *
 from telegram import InlineKeyboardMarkup, InlineKeyboardButton as Btn
 from telegram.ext import Updater, CallbackQueryHandler, CommandHandler
@@ -10,13 +11,13 @@ import channel.send_to_telegram as channel
 
 
 def upload(video_id, num):
-    print('download preview...', end='')
+    print('download preview...', end=' ')
     file_path = f'{video_id}_maxres{num}.jpg'
     with open(file_path, 'wb') as f:
         f.write(requests.get(f'https://i.ytimg.com/vi/{video_id}/maxres{num}.jpg').content)
         print('ok')
 
-    print('upload to youtube...', end='')
+    print('upload to youtube...', end=' ')
     youtube.upload_thumbnail(video_id, file_path)
     os.remove(file_path)
     print('ok')
