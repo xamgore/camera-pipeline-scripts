@@ -38,7 +38,7 @@ def send():
         channel = env['DEV_CHAT']
 
         for video_id in queue:
-            with suppress(TelegramError):
+            try:
                 markup = InlineKeyboardMarkup([[
                     Btn(" 1️⃣  ", callback_data=f"{video_id}||1"),
                     Btn(" 2️⃣  ", callback_data=f"{video_id}||2"),
@@ -58,6 +58,8 @@ def send():
                 if success: ready.append(video_id)
                 print(f'{video_id}: {"ok" if success else "err"}')
                 sleep(randint(2, 5))
+            except TelegramError as e:
+                bot.sendMessage(channel, e.message + "\n" + photo_url)
 
         lost = len(queue) - len(ready)
         save_as_json_to_file(fromFile + list(ready), 'thumbnails.json')

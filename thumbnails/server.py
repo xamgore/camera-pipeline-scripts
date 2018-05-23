@@ -8,7 +8,11 @@ import requests
 import config
 import thumbnails.send as thumbnails
 import channel.send_to_telegram as channel
+import datetime
 
+
+def log(msg):
+    print(datetime.datetime.now().strftime(f'%Y-%m-%d %H:%M:%S {msg}'))
 
 def upload(video_id, num):
     print('download preview...', end=' ')
@@ -45,9 +49,11 @@ def thumbnail_button(bot, cfg):
 
 
 def send_thumbnails(bot, cfg):
+    log('/thumbnails')
     bot.sendMessage(env['DEV_CHAT'], thumbnails.send(), disable_notification=True)
 
 def send_videos(bot, cfg):
+    log('/channel')
     bot.sendMessage(env['DEV_CHAT'], channel.send(), disable_notification=True)
 
 
