@@ -3,7 +3,9 @@
 from __init__ import *
 from telegram import InlineKeyboardMarkup, InlineKeyboardButton as Btn
 from telegram.ext import Updater, CallbackQueryHandler, CommandHandler
+from telegram.ext.dispatcher import run_async
 from youtube import YoutubeClient
+
 import requests
 import config
 import thumbnails.send as thumbnails
@@ -27,6 +29,7 @@ def upload(video_id, num):
     print('ok')
 
 
+@run_async
 def thumbnail_button(bot, cfg):
     req = cfg.callback_query
     video_id, num = req.data.split('||')
@@ -48,10 +51,12 @@ def thumbnail_button(bot, cfg):
         ]]))
 
 
+@run_async
 def send_thumbnails(bot, cfg):
     log('/thumbnails')
     bot.sendMessage(env['DEV_CHAT'], thumbnails.send(), disable_notification=True)
 
+@run_async
 def send_videos(bot, cfg):
     log('/channel')
     bot.sendMessage(env['DEV_CHAT'], channel.send(), disable_notification=True)
