@@ -1,6 +1,6 @@
 ## Description
 
-An util to concat `*.MTS` files and improve the audio loudness. It is a typical pipeline that we do with video lectures. It can be expressed in the following commands:
+An util that concats `*.MTS` files and improves the audio loudness. It is a typical pipeline that we do with video lectures. It can be expressed in the following commands:
 
 ```bash
 ffmpeg -i 'concat:0.MTS|1.MTS' -vcodec copy -acodec copy res.mp4
@@ -20,7 +20,7 @@ positional arguments:
 optional arguments:
   -h, --help       show this help message and exit
   -n, --normalize  do audio normalization
-  -o FILE          output file name, current date by default
+  -o FILE          output file name, record date by default
 ```
 
 ### Examples
@@ -31,8 +31,12 @@ Handles relative paths:
 ./convert.py ~/video/5.MTS ../../6.MTS --normalize -o res.mp4
 ```
 
-Output file name can be omitted, then the current time (like `2018-06-03_13-16-20.mp4`) is used:
+Output file name can be omitted, then the current time (like `2018-06-03__13-16-20.mp4`) is used:
 
 ```bash
 ./convert.py ~/video/5.MTS ../../6.MTS --normalize
 ```
+
+### Notes
+
+The current directory is used as temprorary.
