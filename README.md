@@ -1,3 +1,11 @@
+#### How to convert:
+
+```bash
+./au-camera-scripts/get_dates.py
+
+python ~/au-camera-scripts/convert/convert.py movies/000{0..1}.MTS -o kek.mp4
+```
+
 #### fstab automount
 
 ```
