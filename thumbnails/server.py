@@ -41,7 +41,7 @@ def thumbnail_button(bot, cfg):
 
     f = lambda s, i: " 🆗 " if str(i) == num else s
 
-    return not bot.editMessageReplyMarkup(
+    bot.editMessageReplyMarkup(
         chat_id=req.message.chat.id,
         message_id=req.message.message_id,
         reply_markup=InlineKeyboardMarkup([[
@@ -49,6 +49,8 @@ def thumbnail_button(bot, cfg):
             Btn(f(" 2️⃣  ", 2), callback_data=f"{video_id}||2"),
             Btn(f(" 3️⃣  ", 3), callback_data=f"{video_id}||3"),
         ]]))
+    
+    return req.answer()
 
 
 @run_async
