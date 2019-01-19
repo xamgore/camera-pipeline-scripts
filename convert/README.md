@@ -37,6 +37,13 @@ Output file name can be omitted, then the current time (like `2018-06-03__13-16-
 ./convert.py ~/video/5.MTS ../../6.MTS --normalize
 ```
 
+The typcal example of usage is:
+
+```bash
+cd ~
+./convert.py /sdcard/STREAM/{5,6,7,8}.MTS -o lecture.mp4
+```
+
 ### Notes
 
 The current directory is used as temprorary.
